@@ -26,9 +26,10 @@ defmodule SetLocale.Mixfile do
 
   def application do
     [
-      applications: [
+      extra_applications: [
         :gettext,
-        :logger
+        :logger,
+        :plug
       ]
     ]
   end
@@ -36,6 +37,7 @@ defmodule SetLocale.Mixfile do
   defp deps do
     [
       {:phoenix, ">1.3.0"},
+      {:plug, "~> 1.4"},
       {:gettext, "~> 0.14 or ~> 1.0"},
       {:earmark, "~>1.3.1", only: :dev},
       {:ex_doc, ">0.13.1", only: :dev},
